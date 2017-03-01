@@ -8,7 +8,7 @@ EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
 # Commands
 | Key Combination | Description |
 | --------------- | ----------- |
-| Shift+O         | Opens the prompt |
+| Shift+O         | Opens the prompt [Keyphrases](#)|
 | Shift+C         | Opens the Cover. (Be on an http:// site ALWAYS.) |
 | Shift+G         | Goes to dictionary.com |
 | Shift+T         | Crashes the page |
