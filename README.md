@@ -4,7 +4,7 @@ The masterful, quiet bookmark ninja
 EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
 
 Commands:
-  Shift+O: Opens the prompt
+  . Shift+O: Opens the prompt
   Shift+C: Opens the Cover. (Be on an http:// site ALWAYS.)
   Shift+G: Goes to dictionary.com
   Shift+T: Crashes the page
