@@ -4,7 +4,7 @@
 
 
 EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
-[Test](javascript:alert("Ho");)
+
 # Commands
 | Key Combination | Description |
 | --------------- | ----------- |
