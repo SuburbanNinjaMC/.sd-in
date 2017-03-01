@@ -1,14 +1,16 @@
 # .sd-in
-The masterful, quiet bookmark ninja
-**0.0.0.2**
+> The masterful, quiet bookmark ninja
+>> **0.0.0.2**
+
+
 EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
 
-Commands:
-  . Shift+O: Opens the prompt
-  Shift+C: Opens the Cover. (Be on an http:// site ALWAYS.)
-  Shift+G: Goes to dictionary.com
-  Shift+T: Crashes the page
-  Shift+N: Toggles New Tab (Opens in a new window.)
+| # Commands: |
+ Shift+O: Opens the prompt
+ Shift+C: Opens the Cover. (Be on an http:// site ALWAYS.)
+Shift+G: Goes to dictionary.com
+ Shift+T: Crashes the page
+ Shift+N: Toggles New Tab (Opens in a new window.)
 
 Shift+O Prompts:
   textbox: Prompts for initializing code. Type HTML, CSS, ETC. Opens an editable textbox.
