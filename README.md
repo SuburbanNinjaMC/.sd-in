@@ -3,6 +3,7 @@
 > The masterful, quiet bookmark ninja
 >> **0.0.0.3:5**
 
+[Go here and drag link for Badger 5](https://arkagaen.github.io/.sd-in/)
 
 EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
 
