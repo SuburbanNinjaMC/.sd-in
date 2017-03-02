@@ -1,4 +1,5 @@
 # .sd-in
+> ## Badger
 > The masterful, quiet bookmark ninja
 >> **0.0.0.2**
 
@@ -22,6 +23,16 @@ EXCEPT FOR THE IMG TRANSFORM, NEVER TYPE THE HTTP(S)://!!!!!!
 | cover     | Opens the Cover. (Be on an http:// site ALWAYS.) |
 | search    | Goes to the Covered Bing Search. (Now you can click on links) |
 | ctri      | Crashes the page |
-| 1ip       | Goes to the Covered IP of your system. |
+| ip       | Goes to the Covered IP of your system. |
 | img flip  | Turns images upside down on your screen |
 | trap      | Waits 5 seconds, then whenever a key is pressed, flips the screen upside down. |
+| NEW IN BADGER  |   |
+| ________________ | ___  |
+| iptb | Makes an in-page textbox |
+| ae | Goes to Covered Aerakor (Be on an http:// site ALWAYS.) |
+| iptb | Goes to Covered Aelon (Be on an http:// site ALWAYS.)|
+
+# What should the next version be?
+- Bear
+- Bird
+- What else?
