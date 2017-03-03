@@ -1,0 +1,132 @@
+:root {
+    --fullname: "ae:sd:in";
+    --animalname: "Baboon";
+    --flux: "";
+    --nanimalname: "Badger";
+    --nflux: "5";
+    --mc: #eaca15;
+    --tc: #37313f;
+    --tec: #d18b87;
+    --gmc: #51381c;
+}
+
+.three-bars::before {
+    content: "☰";
+    font-family: monospace;
+    display: inline-block;
+    font-size: 7vh;
+}
+
+.three-bars {
+    position: fixed;
+    top: 4px;
+    left: 10px;
+    color: var(--tc);
+}
+
+.topsplash {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 10vh;
+    width: 100vw;
+    z-index: -1000000000000;
+}
+
+.header {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 10vh;
+}
+
+.main {
+    position: absolute;
+}
+
+.side {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 5px;
+    transform: rotate(270deg);
+    width: 99vh;
+}
+
+.title {
+    font-size: 23vh;
+    margin: 0px;
+    line-height: 21vh;
+}
+
+.sub {
+    font-size: 13vh;
+    margin: 0px;
+    line-height: 11vh;
+}
+
+.header * {
+    display: inline;
+    text-align: right;
+}
+
+* {
+    font-family: Century Gothic;
+}
+
+.section-title {
+    font-size: 6vh;
+    color: var(--tc);
+}
+
+.section-title:not(#saejs)::after {
+    content: " |";
+}
+
+.mcb {
+    background-color: var(--mc);
+}
+
+.spt::before {
+    content: "Program";
+}
+
+.saj::before {
+    content: "ae.js";
+}
+
+.sgh::before {
+    content: "GitHub";
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+.lorem::before {
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+}
+
+.content-animal-name::before {
+    content: var(--animalname);
+}
+
+.content-flux-version::before {
+    content: var(--flux);
+}
+
+.ncontent-animal-name::before {
+    content: var(--nanimalname);
+}
+
+.ncontent-flux-version::before {
+    content: var(--nflux);
+}
+
+.content-full-name::before {
+    content: var(--fullname);
+}

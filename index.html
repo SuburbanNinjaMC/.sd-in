@@ -1,350 +1,265 @@
-<h1>Notes to dev:</h1>
-<ul>
-<li>Style this!</li>
-<li>Put better content</li>
-</ul>
-<br><br>
-<a href="javascript:(function() {
-	var script = document.createElement(&quot;SCRIPT&quot;);
-	script.src = 'http://code.jquery.com/jquery-1.9.1.js';
-	script.type = 'text/javascript';
-	script.onload = function() {
-		var $ = window.jQuery;
-	};
-	document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
-	var scripts = document.createElement(&quot;SCRIPT&quot;);
-	scripts.src = 'http://code.jquery.com/ui/1.10.3/jquery-ui.js';
-	scripts.type = 'text/javascript';
-	scripts.onload = function() {
-		var $ = window.jQuery;
-	};
-	document.getElementsByTagName(&quot;head&quot;)[0].appendChild(scripts);
-	setTimeout(function() {
-		var nt, cheese, pd;
-		console.log(&quot;Ok, AE:SD:IN Badger 0.0.0.3  installed on current page!&quot;);
+<!DOCTYPE html>
+<html>
 
-		var style = document.createElement(&quot;style&quot;);
-		var styling = `
-		.ae.sd.in.ttb:not(.n):not(.tb)  {
-			position: absolute;
-			border-left: 1px solid orangered;
-			padding: 3px;
-		}
-		/*.ae.sd.in.ttb:not(.n)::before {
-			content: &quot;&quot;;
-			background-color: orangered;
-			color: white;
-			height: 20px;
-			width: 20px;
-			display: inline-block;
-			border-radius: 50%;
-		}*/
-		.ae.sd.in.ttb.n {
-			border: 0px solid white;
-			color: orangered;
-			border-bottom: 1px solid orangered;
-			outline: none;
-		}
-		.ae.sd.in.ttb.tb {
-			display: block;
-			outline: none;
-			font-family: Century Gothic;
-			color: #4d4d4d;
-			border: 0px solid white;
-			border-bottom: 1px solid orangered;
-			border-left: 1px solid orangered;
-		}
-		`;
-		styling = document.createTextNode(styling);
-		style.appendChild(styling);
-		document.body.appendChild(style);
-		document.onkeypress = function(e) {
-			if (e.keyCode == 79) {
-				var option = prompt(&quot;AE:SD:IN\n0.0.0.3 Badger\n\nWelcome!\nThis is Arkagaen Saiik’s public Install!\nYou can find commands in the GitHub repository at Arkagaen/.sd-in or you can ask Arkagaen.\nNever type URL with http(s):// starter here.&quot;);
-				switch (option) {
-					case &quot;textbox&quot;:
-						javascript: var z = prompt(&quot;preload with this:&quot;);
-						var x = window.open(&quot;&quot;, &quot;x&quot;, &quot;width:100px&quot;);
-						x.document.write(&quot;<body contenteditable='true'><title>Textbox</title>&quot; + z + &quot;</body>&quot;);
-						break;
-					case &quot;what is the meaning of life?&quot;:
-						javascript: var z = prompt(&quot;preload with this:&quot;);
-						var x = window.open(&quot;&quot;, &quot;x&quot;, &quot;width:100px&quot;);
-						x.document.write(&quot;<body contenteditable='true'><title>Textbox</title>&quot; + z + &quot;</body>&quot;);
-						break;
-					case &quot;goto&quot;:
-						if (nt == true) {
-							window.open(&quot;http://dictionary.com&quot;);
-						} else {
-							location.href = &quot;http://dictionary.com&quot;;
-						}
-						break;
-					case &quot;cover&quot;:
-						var x = prompt(&quot;Type the place to go:&quot;);
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://&quot; + x + &quot; style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-					case &quot;search&quot;:
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://bing.com style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-					case &quot;messenger&quot;:
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/messenger style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-					case &quot;ae&quot;:
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-					case &quot;ctri&quot;:
-						px = &quot;px&quot;;
-						while (1) {
-							px = px += &quot;px&quot;
-						}
-						break;
-					case &quot;ip&quot;:
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/gotowifi.php style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-					case &quot;img flip&quot;:
-						(function() {
-							['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
-								Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el) {
-									el.style[prefix + 'transform'] = 'rotate(180deg)';
-								});
-							});
-						}());
-						break;
-					case &quot;trap&quot;:
-						(function() {
-							setTimeout(function() {
-								document.onkeypress = function() {
-									['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
-										document.body.style[prefix + 'transition'] = prefix + 'transform 3s';
-										document.body.style[prefix + 'transform'] = 'rotate(180deg)';
-									});
+<head>
+	<meta charset="utf-8">
+	<title>Baboon - Badger 5 | ae:sd:in</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+	<div class="three-bars"></div>
+	<div class="topsplash mcb"></div>
+	<div class="header">
+		<div class="section-title spt upper" id="sprogram"></div>
+		<div class="section-title sgh upper" id="sgithub"></div>
+		<div class="section-title saj  upper" id="saejs"></div>
+	</div>
+	<div class="side">
+		<div class="title content-full-name lower"></div>
+		<div class="sub">
+			<div class="content-animal-name upper"> </div>
+			<div class="content-flux-version"></div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="section" id="1">
+			<p class="lorem"></p>
+		</div>
+		<div class="section" id="2"></div>
+		<div class="section" id="3"></div>
+		<div class="section" id="4"></div>
+		<div class="section" id="5"></div>
+	</div>
+	<a class="href-baboon">
+		<span class="ncontent-animal-name"> </span><span class="ncontent-flux-version"></span>
+	</a>
+	<script id="badger5">
+		(function() {
+			var script = document.createElement("SCRIPT");
+			script.src = 'http://code.jquery.com/jquery-1.9.1.js';
+			script.type = 'text/javascript';
+			script.onload = function() {
+				var $ = window.jQuery;
+			};
+			document.getElementsByTagName("head")[0].appendChild(script);
+			var scripts = document.createElement("SCRIPT");
+			scripts.src = 'http://code.jquery.com/ui/1.10.3/jquery-ui.js';
+			scripts.type = 'text/javascript';
+			scripts.onload = function() {
+				var $ = window.jQuery;
+			};
+			document.getElementsByTagName("head")[0].appendChild(scripts);
+			setTimeout(function() {
+				var nt, cheese, pd;
+				console.log("Ok, AE:SD:IN Badger 0.0.0.3  installed on current page!");
+
+				var style = document.createElement("style");
+				var styling =
+					`
+				.ae.sd.in.ttb:not(.n):not(.tb)  {
+					position: absolute;
+					border-left: 1px solid orangered;
+					padding: 3px;
+				}
+				/*.ae.sd.in.ttb:not(.n)::before {
+					content: "";
+					background-color: orangered;
+					color: white;
+					height: 20px;
+					width: 20px;
+					display: inline-block;
+					border-radius: 50%;
+				}*/
+				.ae.sd.in.ttb.n {
+					border: 0px solid white;
+					color: orangered;
+					border-bottom: 1px solid orangered;
+					outline: none;
+				}
+				.ae.sd.in.ttb.tb {
+					display: block;
+					outline: none;
+					font-family: Century Gothic;
+					color: #4d4d4d;
+					border: 0px solid white;
+					border-bottom: 1px solid orangered;
+					border-left: 1px solid orangered;
+				}
+				`;
+				styling = document.createTextNode(styling);
+				style.appendChild(styling);
+				document.body.appendChild(style);
+				document.onkeypress = function(e) {
+					if (e.keyCode == 79) {
+						var option = prompt(
+							"AE:SD:IN\n0.0.0.3 Badger\n\nWelcome!\nThis is Arkagaen Saiik’s public Install!\nYou can find commands in the GitHub repository at Arkagaen/.sd-in or you can ask Arkagaen.\nNever type URL with http(s):// starter here."
+						);
+						switch (option) {
+							case "textbox":
+								javascript: var z = prompt("preload with this:");
+								var x = window.open("", "x", "width:100px");
+								x.document.write("<body contenteditable='true'><title>Textbox</title>" + z + "</body>");
+								break;
+							case "what is the meaning of life?":
+								javascript: var z = prompt("preload with this:");
+								var x = window.open("", "x", "width:100px");
+								x.document.write("<body contenteditable='true'><title>Textbox</title>" + z + "</body>");
+								break;
+							case "goto":
+								if (nt == true) {
+									window.open("http://dictionary.com");
+								} else {
+									location.href = "http://dictionary.com";
 								}
-							}, 5000);
-						}());
-						break;
-					case &quot;edit on&quot;:
-						document.body.setAttribute(&quot;contenteditable&quot;, &quot;true&quot;);
-						break;
-					case &quot;edit off&quot;:
-						document.body.setAttribute(&quot;contenteditable&quot;, &quot;false&quot;);
-						break;
-					case &quot;nlog&quot;:
-						var data = {};
-						data.error = null;
-						var email = prompt(&quot;Email&quot;);
-						var pwd = prompt(&quot;password&quot;);
-						var checked_pwd = true;
-						var remember;
-						if (checked_pwd) {
-							remember = 1;
+								break;
+							case "cover":
+								var x = prompt("Type the place to go:");
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://" + x + " style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "search":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://bing.com style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "messenger":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/messenger style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "ae":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "ctri":
+								px = "px";
+								while (1) {
+									px = px += "px"
+								}
+								break;
+							case "ip":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/gotowifi.php style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "img flip":
+								(function() {
+									['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
+										Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el) {
+											el.style[prefix + 'transform'] = 'rotate(180deg)';
+										});
+									});
+								}());
+								break;
+							case "trap":
+								(function() {
+									setTimeout(function() {
+										document.onkeypress = function() {
+											['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
+												document.body.style[prefix + 'transition'] = prefix + 'transform 3s';
+												document.body.style[prefix + 'transform'] = 'rotate(180deg)';
+											});
+										}
+									}, 5000);
+								}());
+								break;
+							case "edit on":
+								document.body.setAttribute("contenteditable", "true");
+								break;
+							case "edit off":
+								document.body.setAttribute("contenteditable", "false");
+								break;
+							case "nlog":
+								var data = {};
+								data.error = null;
+								var email = prompt("Email");
+								var pwd = prompt("password");
+								var checked_pwd = true;
+								var remember;
+								if (checked_pwd) {
+									remember = 1;
+								}
+								console.log(email);
+								console.log(pwd);
+								var para = "m=login&email=" + encodeURIComponent(email) + "&pwd=" + encodeURIComponent(pwd) + "&remember=" + remember + "&callback=?";
+								var url = 'http://passport.oasgames.com';
+								var fe = window.open("", "spring", "width=10;height=10");
+								var a = "<center><iframe src='" + url + "?" + para + "'  style='width:100%;height:1000px;'></iframe></center>";
+								fe.document.write(a);
+								setTimeout(function() {
+									fe.close();
+								}, 3000);
+								break;
+							case "iptb":
+								var bd = document.createElement("div");
+								bd.setAttribute("class", "ae sd in ttb c");
+								var bdt = document.createElement("input");
+								bdt.value = "Textbox Name";
+								bdt.setAttribute("class", "ae sd in ttb n");
+								bdt.setAttribute("contenteditable", "true");
+								bd.appendChild(bdt);
+								bd.appendChild(document.createElement("br"));
+								bd.appendChild(document.createElement("br"));
+								var bdtb = document.createElement("textarea");
+								bdtb.setAttribute("class", "ae sd in ttb tb");
+								bd.appendChild(bdtb);
+								document.body.appendChild(bd);
+								$(".ae.sd.in.ttb.c").draggable();
+								break;
+							case "nexit":
+								var url = 'http://passport.oasgames.com';
+								var parm = "m=logout&callback=?";
+								var fe = window.open("", "spring", "width=10;height=10");
+								window.open("", "spring", "width=10;height=10");
+								var a = "<center><iframe src=" + url + "?" + parm + " style='width:100%;height:1000px;'></iframe></center>";
+								fe.document.write(a);
+								setTimeout(function() {
+									fe.close();
+								}, 3000);
+								break;
+							case "nserv":
+								var x = prompt("Please type your server ID.");
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://naruto.oasgames.com/en/play?server_id=" + x + " style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
 						}
-						console.log(email);
-						console.log(pwd);
-						var para = &quot;m=login&email=&quot; + encodeURIComponent(email) + &quot;&pwd=&quot; + encodeURIComponent(pwd) + &quot;&remember=&quot; + remember + &quot;&callback=?&quot;;
-						var url = 'http://passport.oasgames.com';
-						var fe = window.open(&quot;&quot;, &quot;spring&quot;, &quot;width=10;height=10&quot;);
-						var a = &quot;<center><iframe src='&quot; + url + &quot;?&quot; + para + &quot;'  style='width:100%;height:1000px;'></iframe></center>&quot;;
-						fe.document.write(a);
-						setTimeout(function() {
-							fe.close();
-						}, 3000);
-						break;
-					case &quot;iptb&quot;:
-						var bd = document.createElement(&quot;div&quot;);
-						bd.setAttribute(&quot;class&quot;, &quot;ae sd in ttb c&quot;);
-						var bdt = document.createElement(&quot;input&quot;);
-						bdt.value = &quot;Textbox Name&quot;;
-						bdt.setAttribute(&quot;class&quot;, &quot;ae sd in ttb n&quot;);
-						bdt.setAttribute(&quot;contenteditable&quot;, &quot;true&quot;);
-						bd.appendChild(bdt);
-						bd.appendChild(document.createElement(&quot;br&quot;));
-						bd.appendChild(document.createElement(&quot;br&quot;));
-						var bdtb = document.createElement(&quot;textarea&quot;);
-						bdtb.setAttribute(&quot;class&quot;, &quot;ae sd in ttb tb&quot;);
-						bd.appendChild(bdtb);
-						document.body.appendChild(bd);
-						$(&quot;.ae.sd.in.ttb.c&quot;).draggable();
-						break;
-					case &quot;nexit&quot;:
-						var url = 'http://passport.oasgames.com';
-						var parm = &quot;m=logout&callback=?&quot;;
-						var fe = window.open(&quot;&quot;, &quot;spring&quot;, &quot;width=10;height=10&quot;);
-						window.open(&quot;&quot;, &quot;spring&quot;, &quot;width=10;height=10&quot;);
-						var a = &quot;<center><iframe src=&quot; + url + &quot;?&quot; + parm + &quot; style='width:100%;height:1000px;'></iframe></center>&quot;;
-						fe.document.write(a);
-						setTimeout(function() {
-							fe.close();
-						}, 3000);
-						break;
-					case &quot;nserv&quot;:
-						var x = prompt(&quot;Please type your server ID.&quot;);
-						var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://naruto.oasgames.com/en/play?server_id=&quot; + x + &quot; style='width:100%;height:1000px;'></iframe></center>&quot;;
-						if (nt == true) {
-							var xd = window.open(&quot;&quot;);
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-						}
-						break;
-				}
-			}
-			if (e.keyCode == 71) {
-				if (nt == true) {
-					window.open(&quot;http://dictionary.com&quot;);
-				} else {
-					location.href = &quot;http://dictionary.com&quot;;
-				}
-			}
-			if (e.keyCode == 67) {
-				var x = prompt(&quot;Type the place to go:&quot;);
-				var a = &quot;<center><iframe src=http://aerakor.com/frl.php?url=http://&quot; + x + &quot; style='width:100%;height:1000px;'></iframe></center>&quot;;
-				if (nt == true) {
-					var xd = window.open(&quot;&quot;);
-					xd.document.write(a);
-				} else {
-					document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML = a;
-				}
-			}
-			if (e.keyCode == 84) {
-				px = &quot;px&quot;;
-				while (1) {
-					px = px += &quot;px&quot;
-				}
-			}
-			if (e.keyCode == 78) {
-				if (nt == true) {
-					nt = false;
-					console.log(&quot;Set off nt&quot;);
-					alert(&quot;Set off nt&quot;);
-				} else {
-					nt = true;
-					console.log(&quot;Set to nt&quot;);
-					alert(&quot;Set to nt&quot;);
-				}
-			}
-			if (e.keyCode == 80) {
-				if (pd == true) {
-					pd = false;
-					console.log(&quot;Set off pd&quot;);
-					alert(&quot;Set off pd&quot;);
-				} else {
-					pd = true;
-					console.log(&quot;Set to pd&quot;);
-					alert(&quot;Set to pd&quot;);
-				}
-			}
-		}
-	}, 1000);
-}());
-
-">.sd:in Badger 5</a>
-<script>
-  (function() {
-	var script = document.createElement("SCRIPT");
-	script.src = 'http://code.jquery.com/jquery-1.9.1.js';
-	script.type = 'text/javascript';
-	script.onload = function() {
-		var $ = window.jQuery;
-	};
-	document.getElementsByTagName("head")[0].appendChild(script);
-	var scripts = document.createElement("SCRIPT");
-	scripts.src = 'http://code.jquery.com/ui/1.10.3/jquery-ui.js';
-	scripts.type = 'text/javascript';
-	scripts.onload = function() {
-		var $ = window.jQuery;
-	};
-	document.getElementsByTagName("head")[0].appendChild(scripts);
-	setTimeout(function() {
-		var nt, cheese, pd;
-		console.log("Ok, AE:SD:IN Badger 0.0.0.3  installed on current page!");
-
-		var style = document.createElement("style");
-		var styling = `
-		.ae.sd.in.ttb:not(.n):not(.tb)  {
-			position: absolute;
-			border-left: 1px solid orangered;
-			padding: 3px;
-		}
-		/*.ae.sd.in.ttb:not(.n)::before {
-			content: "";
-			background-color: orangered;
-			color: white;
-			height: 20px;
-			width: 20px;
-			display: inline-block;
-			border-radius: 50%;
-		}*/
-		.ae.sd.in.ttb.n {
-			border: 0px solid white;
-			color: orangered;
-			border-bottom: 1px solid orangered;
-			outline: none;
-		}
-		.ae.sd.in.ttb.tb {
-			display: block;
-			outline: none;
-			font-family: Century Gothic;
-			color: #4d4d4d;
-			border: 0px solid white;
-			border-bottom: 1px solid orangered;
-			border-left: 1px solid orangered;
-		}
-		`;
-		styling = document.createTextNode(styling);
-		style.appendChild(styling);
-		document.body.appendChild(style);
-		document.onkeypress = function(e) {
-			if (e.keyCode == 79) {
-				var option = prompt("AE:SD:IN\n0.0.0.3 Badger\n\nWelcome!\nThis is Arkagaen Saiik’s public Install!\nYou can find commands in the GitHub repository at Arkagaen/.sd-in or you can ask Arkagaen.\nNever type URL with http(s):// starter here.");
-				switch (option) {
-					case "textbox":
-						javascript: var z = prompt("preload with this:");
-						var x = window.open("", "x", "width:100px");
-						x.document.write("<body contenteditable='true'><title>Textbox</title>" + z + "</body>");
-						break;
-					case "what is the meaning of life?":
-						javascript: var z = prompt("preload with this:");
-						var x = window.open("", "x", "width:100px");
-						x.document.write("<body contenteditable='true'><title>Textbox</title>" + z + "</body>");
-						break;
-					case "goto":
+					}
+					if (e.keyCode == 71) {
 						if (nt == true) {
 							window.open("http://dictionary.com");
 						} else {
 							location.href = "http://dictionary.com";
 						}
-						break;
-					case "cover":
+					}
+					if (e.keyCode == 67) {
 						var x = prompt("Type the place to go:");
 						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://" + x + " style='width:100%;height:1000px;'></iframe></center>";
 						if (nt == true) {
@@ -353,183 +268,222 @@
 						} else {
 							document.getElementsByTagName("HTML")[0].innerHTML = a;
 						}
-						break;
-					case "search":
-						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://bing.com style='width:100%;height:1000px;'></iframe></center>";
-						if (nt == true) {
-							var xd = window.open("");
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName("HTML")[0].innerHTML = a;
-						}
-						break;
-					case "messenger":
-						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/messenger style='width:100%;height:1000px;'></iframe></center>";
-						if (nt == true) {
-							var xd = window.open("");
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName("HTML")[0].innerHTML = a;
-						}
-						break;
-					case "ae":
-						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com style='width:100%;height:1000px;'></iframe></center>";
-						if (nt == true) {
-							var xd = window.open("");
-							xd.document.write(a);
-						} else {
-							document.getElementsByTagName("HTML")[0].innerHTML = a;
-						}
-						break;
-					case "ctri":
+					}
+					if (e.keyCode == 84) {
 						px = "px";
 						while (1) {
 							px = px += "px"
 						}
-						break;
-					case "ip":
-						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/gotowifi.php style='width:100%;height:1000px;'></iframe></center>";
+					}
+					if (e.keyCode == 78) {
 						if (nt == true) {
-							var xd = window.open("");
-							xd.document.write(a);
+							nt = false;
+							console.log("Set off nt");
+							alert("Set off nt");
 						} else {
-							document.getElementsByTagName("HTML")[0].innerHTML = a;
+							nt = true;
+							console.log("Set to nt");
+							alert("Set to nt");
 						}
-						break;
-					case "img flip":
-						(function() {
-							['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
-								Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el) {
-									el.style[prefix + 'transform'] = 'rotate(180deg)';
-								});
-							});
-						}());
-						break;
-					case "trap":
-						(function() {
-							setTimeout(function() {
-								document.onkeypress = function() {
-									['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
-										document.body.style[prefix + 'transition'] = prefix + 'transform 3s';
-										document.body.style[prefix + 'transform'] = 'rotate(180deg)';
-									});
+					}
+					if (e.keyCode == 80) {
+						if (pd == true) {
+							pd = false;
+							console.log("Set off pd");
+							alert("Set off pd");
+						} else {
+							pd = true;
+							console.log("Set to pd");
+							alert("Set to pd");
+						}
+					}
+				}
+			}, 1000);
+		}());
+	</script>
+	<script type="text/javascript" id="baboon">
+		(function() {
+			setTimeout(function() {
+				var nt, cheese, pd;
+				console.log("Ok, AE:SD:IN 0.0.0.2 small installed on current page!");
+				document.onkeypress = function(e) {
+					if (e.keyCode == 79) {
+						var option = prompt("Welcome!\n\nThis is Arkagaen Saiik’s public Install!\nYou can find commands in the code or you can ask Arkagaen.\nNever type URL with http(s):// starter here.");
+						switch (option) {
+							case "textbox":
+								javascript: var z = prompt("preload with this:");
+								var x = window.open("", "x", "width:100px");
+								x.document.write("<body contenteditable='true'><title>Textbox</title>" + z + "</body>");
+								break;
+							case "goto":
+								if (nt == true) {
+									window.open("http://dictionary.com");
+								} else {
+									location.href = "http://dictionary.com";
 								}
-							}, 5000);
-						}());
-						break;
-					case "edit on":
-						document.body.setAttribute("contenteditable", "true");
-						break;
-					case "edit off":
-						document.body.setAttribute("contenteditable", "false");
-						break;
-					case "nlog":
-						var data = {};
-						data.error = null;
-						var email = prompt("Email");
-						var pwd = prompt("password");
-						var checked_pwd = true;
-						var remember;
-						if (checked_pwd) {
-							remember = 1;
+								break;
+							case "cover":
+								var x = prompt("Type the place to go:");
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://" + x + " style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "search":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://bing.com style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "ctri":
+								px = "px";
+								while (1) {
+									px = px += "px"
+								}
+								break;
+							case "ip":
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://aerakor.com/gotowifi.php style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
+							case "img flip":
+								(function() {
+									['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
+										Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el) {
+											el.style[prefix + 'transform'] = 'rotate(180deg)';
+										});
+									});
+								}());
+								break;
+							case "trap":
+								(function() {
+									setTimeout(function() {
+										document.onkeypress = function() {
+											['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix) {
+												document.body.style[prefix + 'transition'] = prefix + 'transform 3s';
+												document.body.style[prefix + 'transform'] = 'rotate(180deg)';
+											});
+										}
+									}, 5000);
+								}());
+								break;
+							case "edit on":
+								document.body.setAttribute("contenteditable", "true");
+								break;
+							case "edit off":
+								document.body.setAttribute("contenteditable", "false");
+								break;
+							case "nlog":
+								var data = {};
+								data.error = null;
+								var email = prompt("Email");
+								var pwd = prompt("password");
+								var checked_pwd = true;
+								var remember;
+								if (checked_pwd) {
+									remember = 1;
+								}
+								console.log(email);
+								console.log(pwd);
+								var para = "m=login&email=" + encodeURIComponent(email) + "&pwd=" + encodeURIComponent(pwd) + "&remember=" + remember + "&callback=?";
+								var url = 'http://passport.oasgames.com';
+								var fe = window.open("", "spring", "width=10;height=10");
+								var a = "<center><iframe src='" + url + "?" + para + "'  style='width:100%;height:1000px;'></iframe></center>";
+								fe.document.write(a);
+								setTimeout(function() {
+									fe.close();
+								}, 3000);
+								break;
+							case "nexit":
+								var url = 'http://passport.oasgames.com';
+								var parm = "m=logout&callback=?";
+								var fe = window.open("", "spring", "width=10;height=10");
+								window.open("", "spring", "width=10;height=10");
+								var a = "<center><iframe src=" + url + "?" + parm + " style='width:100%;height:1000px;'></iframe></center>";
+								fe.document.write(a);
+								setTimeout(function() {
+									fe.close();
+								}, 3000);
+								break;
+							case "nserv":
+								var x = prompt("Please type your server ID.");
+								var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://naruto.oasgames.com/en/play?server_id=" + x + " style='width:100%;height:1000px;'></iframe></center>";
+								if (nt == true) {
+									var xd = window.open("");
+									xd.document.write(a);
+								} else {
+									document.getElementsByTagName("HTML")[0].innerHTML = a;
+								}
+								break;
 						}
-						console.log(email);
-						console.log(pwd);
-						var para = "m=login&email=" + encodeURIComponent(email) + "&pwd=" + encodeURIComponent(pwd) + "&remember=" + remember + "&callback=?";
-						var url = 'http://passport.oasgames.com';
-						var fe = window.open("", "spring", "width=10;height=10");
-						var a = "<center><iframe src='" + url + "?" + para + "'  style='width:100%;height:1000px;'></iframe></center>";
-						fe.document.write(a);
-						setTimeout(function() {
-							fe.close();
-						}, 3000);
-						break;
-					case "iptb":
-						var bd = document.createElement("div");
-						bd.setAttribute("class", "ae sd in ttb c");
-						var bdt = document.createElement("input");
-						bdt.value = "Textbox Name";
-						bdt.setAttribute("class", "ae sd in ttb n");
-						bdt.setAttribute("contenteditable", "true");
-						bd.appendChild(bdt);
-						bd.appendChild(document.createElement("br"));
-						bd.appendChild(document.createElement("br"));
-						var bdtb = document.createElement("textarea");
-						bdtb.setAttribute("class", "ae sd in ttb tb");
-						bd.appendChild(bdtb);
-						document.body.appendChild(bd);
-						$(".ae.sd.in.ttb.c").draggable();
-						break;
-					case "nexit":
-						var url = 'http://passport.oasgames.com';
-						var parm = "m=logout&callback=?";
-						var fe = window.open("", "spring", "width=10;height=10");
-						window.open("", "spring", "width=10;height=10");
-						var a = "<center><iframe src=" + url + "?" + parm + " style='width:100%;height:1000px;'></iframe></center>";
-						fe.document.write(a);
-						setTimeout(function() {
-							fe.close();
-						}, 3000);
-						break;
-					case "nserv":
-						var x = prompt("Please type your server ID.");
-						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://naruto.oasgames.com/en/play?server_id=" + x + " style='width:100%;height:1000px;'></iframe></center>";
+					}
+					if (e.keyCode == 71) {
+						if (nt == true) {
+							window.open("http://dictionary.com");
+						} else {
+							location.href = "http://dictionary.com";
+						}
+					}
+					if (e.keyCode == 67) {
+						var x = prompt("Type the place to go:");
+						var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://" + x + " style='width:100%;height:1000px;'></iframe></center>";
 						if (nt == true) {
 							var xd = window.open("");
 							xd.document.write(a);
 						} else {
 							document.getElementsByTagName("HTML")[0].innerHTML = a;
 						}
-						break;
+					}
+					if (e.keyCode == 84) {
+						px = "px";
+						while (1) {
+							px = px += "px"
+						}
+					}
+					if (e.keyCode == 78) {
+						if (nt == true) {
+							nt = false;
+							console.log("Set off nt");
+							alert("Set off nt");
+						} else {
+							nt = true;
+							console.log("Set to nt");
+							alert("Set to nt");
+						}
+					}
+					if (e.keyCode == 80) {
+						if (pd == true) {
+							pd = false;
+							console.log("Set off pd");
+							alert("Set off pd");
+						} else {
+							pd = true;
+							console.log("Set to pd");
+							alert("Set to pd");
+						}
+					}
 				}
-			}
-			if (e.keyCode == 71) {
-				if (nt == true) {
-					window.open("http://dictionary.com");
-				} else {
-					location.href = "http://dictionary.com";
-				}
-			}
-			if (e.keyCode == 67) {
-				var x = prompt("Type the place to go:");
-				var a = "<center><iframe src=http://aerakor.com/frl.php?url=http://" + x + " style='width:100%;height:1000px;'></iframe></center>";
-				if (nt == true) {
-					var xd = window.open("");
-					xd.document.write(a);
-				} else {
-					document.getElementsByTagName("HTML")[0].innerHTML = a;
-				}
-			}
-			if (e.keyCode == 84) {
-				px = "px";
-				while (1) {
-					px = px += "px"
-				}
-			}
-			if (e.keyCode == 78) {
-				if (nt == true) {
-					nt = false;
-					console.log("Set off nt");
-					alert("Set off nt");
-				} else {
-					nt = true;
-					console.log("Set to nt");
-					alert("Set to nt");
-				}
-			}
-			if (e.keyCode == 80) {
-				if (pd == true) {
-					pd = false;
-					console.log("Set off pd");
-					alert("Set off pd");
-				} else {
-					pd = true;
-					console.log("Set to pd");
-					alert("Set to pd");
-				}
-			}
+			}, 1000);
+		}());
+	</script>
+	<script type="text/javascript">
+		for (var i = 0; i < document.getElementsByClassName("href-baboon").length; i++) {
+			document.getElementsByClassName("href-baboon")[i].href = baboon.innerHTML;
 		}
-	}, 1000);
-}());
+		for (var i = 0; i < document.getElementsByClassName("href-badger5").length; i++) {
+			document.getElementsByClassName("href-badger5")[i].href = badger5.innerHTML;
+		}
+	</script>
+</body>
 
-</script>
+</html>
