@@ -1,7 +1,7 @@
 :root {
     --fullname: "ae:sd:in";
     --animalname: "Baboon";
-    --flux: "";
+    --flux: "X";
     --nanimalname: "Badger";
     --nflux: "5";
     --mc: #eaca15;
@@ -9,7 +9,26 @@
     --tec: #d18b87;
     --gmc: #51381c;
 }
-
+.menu {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: -100vh;
+  margin: 0px;
+  height: 100vh;
+  z-index: 10000000000;
+  width: 20vw;
+  background-color: rgb(250, 250, 250);
+}
+.menuitems {
+  height: 100vh;
+}
+#three-bars:hover .menu {
+  left: 0px;
+}
+.wb {
+  font-size: 4.6vw;
+}
 .three-bars::before {
     content: "☰";
     font-family: monospace;
@@ -22,8 +41,16 @@
     top: 4px;
     left: 10px;
     color: var(--tc);
+    transform: rotate(180deg);
 }
-
+#three-bars:hover .three-bars {
+    transform: rotate(90deg);
+    color: white;
+}
+#three-bars {
+  height: 7vh;
+  width: 7vh;
+}
 .topsplash {
     position: fixed;
     top: 0px;
@@ -42,21 +69,25 @@
 
 .main {
     position: absolute;
+    top: 11vh;
+    right: 0px;
+    bottom: 0px;
+    left: 40vh;
 }
 
 .side {
     position: fixed;
     left: 0px;
-    top: 0px;
     bottom: 5px;
+    top: 10vh;
     transform: rotate(270deg);
-    width: 99vh;
+    width: 90vh;
 }
 
 .title {
-    font-size: 23vh;
+    font-size: 21vh;
     margin: 0px;
-    line-height: 21vh;
+    line-height: 19vh;
 }
 
 .sub {
@@ -64,21 +95,27 @@
     margin: 0px;
     line-height: 11vh;
 }
-
+.sub * {
+  display: inline;
+}
 .header * {
     display: inline;
     text-align: right;
 }
 
 * {
-    font-family: Century Gothic;
+    font-family: Century Gothic, Verdana, arial, serif;
+    transition: all .3s ease-in-out;
 }
-
-.section-title {
-    font-size: 6vh;
+.ts:hover {
+  color: white;
+}
+.section-title:not(.ts) {
     color: var(--tc);
 }
-
+.section-title {
+  font-size: 6vh;
+}
 .section-title:not(#saejs)::after {
     content: " |";
 }
@@ -108,7 +145,7 @@
 }
 
 .lorem::before {
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 }
 
 .content-animal-name::before {
